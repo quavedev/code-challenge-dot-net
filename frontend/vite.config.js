@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { createVuePlugin } from '@vitejs/plugin-vue2'
 
 export default defineConfig({
   plugins: [
-    react()
+    createVuePlugin()
   ],
   server: {
     port: 3000

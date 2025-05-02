@@ -30,11 +30,11 @@ We'll give you feedback based on the position description. Check the timeline se
 
 ## Introduction
 
-At Quave, we use React and .NET for some clients, projects, and products.
+At Quave, we use Vue.js and .NET for some clients, projects, and products.
 
-React is a popular JavaScript library for building user interfaces efficiently, while .NET provides a robust and scalable backend platform.
+Vue.js is a progressive JavaScript framework that makes building user interfaces a breeze, while .NET provides a robust and scalable backend platform.
 
-Our stack leverages React for the frontend, providing excellent component-based architecture with reusable UI components, paired with .NET's powerful features including:
+Our stack leverages Vue.js 2.x for the frontend, providing excellent component-based architecture and reactivity system, paired with .NET's powerful features including:
 - Authentication
 - Background Jobs
 - Entity Framework Core
@@ -44,10 +44,10 @@ Our stack leverages React for the frontend, providing excellent component-based 
 
 ## Required Stack
 
-We want to see your React and .NET skills.
+We want to see your Vue.js and .NET skills.
 
 Your solution must use:
-- Frontend: React 18
+- Frontend: Vue.js 2.x
 - Backend: .NET 8 (or latest stable version)
 - Database: SQL Server or PostgreSQL
 - Styling: Tailwind CSS
@@ -119,7 +119,7 @@ The page should maintain an up-to-date view of the data, ensuring users see chan
 
 1. Use:
    - .NET for the backend API
-   - React for frontend views
+   - Vue.js 2.x for frontend views
    - SQL Server or PostgreSQL for data
    - TailwindCSS for styling
 
