@@ -13,10 +13,10 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Configure CORS
+# Configure CORS for React frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # React frontend
+    allow_origins=["http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -34,3 +34,22 @@ def read_root():
 @app.get("/health")
 def health_check():
     return {"status": "healthy"}
+
+# TODO: Implement the following endpoints:
+
+# Communities (Events) endpoints
+# GET /api/communities/ - List all events
+# POST /api/communities/ - Create new event  
+# GET /api/communities/{id} - Get specific event
+# GET /api/communities/{id}/people - Get people registered for event
+
+# People endpoints
+# GET /api/people/ - List all people
+# POST /api/people/ - Register new person
+# GET /api/people/{id} - Get person details
+# PUT /api/people/{id} - Update person information
+
+# Check-ins endpoints  
+# POST /api/check-ins/{person_id}/check-in - Check in person
+# PUT /api/check-ins/{person_id}/check-out - Check out person
+# GET /api/check-ins/events/{community_id}/summary - Get event summary
