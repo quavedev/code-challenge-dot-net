@@ -1,6 +1,6 @@
 # Quave Challenge API
 
-Python backend for the Event Check-in System using FastAPI and PostgreSQL.
+Python backend skeleton for the Event Check-in System.
 
 ## Setup
 
@@ -9,40 +9,14 @@ Python backend for the Event Check-in System using FastAPI and PostgreSQL.
    poetry install
    ```
 
-2. **Set up environment:**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your database credentials
-   ```
-
-3. **Set up database:**
-   - Create a PostgreSQL database named `quave_challenge`
-   - Update the DATABASE_URL in `.env`
-
-4. **Run the development server:**
+2. **Run the development server:**
    ```bash
    poetry run uvicorn app.main:app --reload --port 8000
    ```
 
-The API will be available at http://localhost:8000
-API documentation: http://localhost:8000/docs
-
 ## TODO
 
-This is a skeleton implementation. You need to implement:
-
-- [ ] Database relationships in models
-- [ ] API endpoints for communities, people, and check-ins
-- [ ] Database migrations with Alembic
-- [ ] Business logic for check-in/check-out
-- [ ] Event summary endpoints
-
-## Database Schema
-
-The basic models are defined in `app/models.py`:
-- `Community` - Events/communities
-- `Person` - Registered attendees  
-- `CheckIn` - Check-in/check-out records
+Implement the entire API according to the challenge requirements.
 
 ## API Documentation
 
