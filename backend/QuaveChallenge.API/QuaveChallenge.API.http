@@ -1,6 +1,0 @@
-@QuaveChallenge.API_HostAddress = http://localhost:5203
-
-GET {{QuaveChallenge.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
