@@ -1,63 +1,48 @@
 # Quave Challenge API
 
-Event Check-in System API built with FastAPI, SQLAlchemy, and PostgreSQL.
+Python backend for the Event Check-in System using FastAPI and PostgreSQL.
 
-## Prerequisites
+## Setup
 
-- Python 3.8+
-- Poetry (for dependency management)
-- PostgreSQL database
-- Docker and Docker Compose (optional, for easy database setup)
-
-## Quick Start
-
-### Option 1: Using Docker for Database
-
-1. **Start PostgreSQL with Docker:**
-   ```bash
-   docker-compose up -d
-   ```
-
-2. **Install Python dependencies:**
+1. **Install dependencies:**
    ```bash
    poetry install
    ```
 
-3. **Set up environment variables:**
-   ```bash
-   cp .env.example .env
-   # Edit .env if needed (default settings work with Docker setup)
-   ```
-
-4. **Run database migrations:**
-   ```bash
-   poetry run alembic upgrade head
-   ```
-
-5. **Seed the database with sample data:**
-   ```bash
-   poetry run python seed_data.py
-   ```
-
-6. **Start the development server:**
-   ```bash
-   poetry run uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-   ```
-
-### Option 2: Using Existing PostgreSQL
-
-1. **Create a PostgreSQL database:**
-   ```sql
-   CREATE DATABASE quave_challenge;
-   ```
-
-2. **Update environment variables:**
+2. **Set up environment:**
    ```bash
    cp .env.example .env
    # Edit .env with your database credentials
    ```
 
-3. **Follow steps 2, 4, 5, and 6 from Option 1**
+3. **Set up database:**
+   - Create a PostgreSQL database named `quave_challenge`
+   - Update the DATABASE_URL in `.env`
+
+4. **Run the development server:**
+   ```bash
+   poetry run uvicorn app.main:app --reload --port 8000
+   ```
+
+The API will be available at http://localhost:8000
+API documentation: http://localhost:8000/docs
+
+## TODO
+
+This is a skeleton implementation. You need to implement:
+
+- [ ] Database relationships in models
+- [ ] API endpoints for communities, people, and check-ins
+- [ ] Database migrations with Alembic
+- [ ] Business logic for check-in/check-out
+- [ ] Event summary endpoints
+
+## Database Schema
+
+The basic models are defined in `app/models.py`:
+- `Community` - Events/communities
+- `Person` - Registered attendees  
+- `CheckIn` - Check-in/check-out records
 
 ## API Documentation
 
